@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import leadsRoutes from './routes/leads.js';
+import inicioRoutes from "./routes/inicio.js"
 import { connectPostgres, disconnectPostgres } from './config/dbConfig.js';
 
 dotenv.config();

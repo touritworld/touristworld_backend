@@ -1,6 +1,6 @@
 import express from 'express';
-import { auth } from '../middleware/auth.js';
 
+const router = express.Router();
 
 router.get ("/", (req, res) => {
   const htmlRespose = `
@@ -14,3 +14,5 @@ router.get ("/", (req, res) => {
   </html>`;
   res.send(htmlRespose)
 })
+
+export default router;
