@@ -17,7 +17,7 @@ app.use(express.json());
 // Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadsRoutes);
-app.get("/", inicioRoutes)
+app.get("/api/", inicioRoutes)
 
 // Manejo de errores global
 app.use((err, req, res, next) => {
