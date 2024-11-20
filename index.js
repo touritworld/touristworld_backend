@@ -16,6 +16,18 @@ app.use(express.json());
 // Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadsRoutes);
+app.get("/", (req, res) => {
+  const htmlRespose = `
+  <html>
+    <head>
+      <title> NodeJs y express en vercel </title>
+    </head>
+    <body>
+      <h1>Backend en vercel</h1>
+    </body>
+  </html>`;
+  res.send(htmlRespose)
+})
 
 // Manejo de errores global
 app.use((err, req, res, next) => {
