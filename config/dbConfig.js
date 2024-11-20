@@ -5,7 +5,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const dbConfig = process.env.DATABASE_URL
-  ? { connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } } // Configuración para Vercel
+  ? { 
+      connectionString: process.env.DATABASE_URL, 
+      ssl: { rejectUnauthorized: false }, 
+      dbEngine: process.env.DB_ENGINE } // Configuración para Vercel
   : {
       user: process.env.DB_USER, // Configuración local
       host: process.env.DB_SERVER,
