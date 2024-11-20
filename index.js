@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import leadsRoutes from './routes/leads.js';
-import inicioRoutes from "./routes/inicio.js"
+
 import { connectPostgres, disconnectPostgres } from './config/dbConfig.js';
 
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(express.json());
 // Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadsRoutes);
-app.use("/api", inicioRoutes)
+
 
 // Manejo de errores global
 app.use((err, req, res, next) => {
