@@ -33,7 +33,7 @@ router.get("/", async (req, res) => {
 });
 
 // Actualizar el estado de un lead
-router.patch("/stage/:id", auth, async (req, res) => {
+router.patch("/stage/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const { stage } = req.body;
